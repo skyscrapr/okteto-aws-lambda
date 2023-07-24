@@ -5,3 +5,5 @@ deploy:
 - cat lambda-url
 destroy:
   - sam delete --no-prompts --stack-name "${OKTETO_NAMESPACE}-okteto-lambda" --region us-east-1
+installer:
+  runner: skyscrapr/okteto-pipeline-runner:1
