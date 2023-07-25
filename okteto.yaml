@@ -1,5 +1,5 @@
 deploy:
-  image: skyscrapr/okteto-pipeline-runner:1
+  image: skyscrapr/okteto-pipeline-installer:1
   commands:
     - sam build
     - sam deploy --no-confirm-changeset --no-fail-on-empty-changeset --s3-prefix "${OKTETO_NAMESPACE}" --stack-name "${OKTETO_NAMESPACE}-okteto-lambda" --resolve-s3
