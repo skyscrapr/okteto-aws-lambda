@@ -9,4 +9,6 @@ RUN apt-get update && \
   curl -o /tmp/aws-sam-cli-linux-x86_64.zip -L https://github.com/aws/aws-sam-cli/releases/latest/download/aws-sam-cli-linux-x86_64.zip && \
   unzip /tmp/aws-sam-cli-linux-x86_64.zip -d /tmp/sam-installation && \
   sh /tmp/sam-installation/install && \
-  sam --version
+  sam --version && \
+  apt-get install -y --no-install-recommends python3 python3-venv
+  
